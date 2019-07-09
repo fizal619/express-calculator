@@ -2,6 +2,8 @@
 var express = require("express");
 var app = express();
 var PORT = 8080;
+const {add, subtract, multiply, divide} = require('./calculator.helper')
+
 
 app.get('/:operator/:num1/:num2', function(req,res){
 	
@@ -31,21 +33,21 @@ app.get('/:operator/:num1/:num2', function(req,res){
 		result = "Sorry, please enter a valid operator!"
 	}
 
-	function add(a, b){
-		return a + b
-	}
+	// function add(a, b){
+	// 	return a + b
+	// }
 
-	function subtract(a, b){
-		return a - b
-	}
+	// function subtract(a, b){
+	// 	return a - b
+	// }
 
-	function multiply(a, b){
-		return a * b
-	}
+	// function multiply(a, b){
+	// 	return a * b
+	// }
 
-	function divide(a, b){
-		return a / b
-	}
+	// function divide(a, b){
+	// 	return a / b
+	// }
 
 	res.json(result);
 });
