@@ -33,6 +33,11 @@ app.get('/:operator/:num1/:num2', function(req,res){
 		result = "Sorry, please enter a valid operator!"
 	}
 
+	add();
+	subtract();
+	multiply();
+	divide();
+
 	// function add(a, b){
 	// 	return a + b
 	// }
