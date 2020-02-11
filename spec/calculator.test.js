@@ -19,3 +19,8 @@ test('divide 2 / 2 to equal 1', () => {
 test('should return numbers', () => {
   expect(typeof divide(2, 2)).toBe('number');
 });
+
+test('big numbers shoulf return scientific otation', () => {
+  const result = multiply(200000000000000, 100000000);
+  expect('' + result).toBe('2e+22');
+});
