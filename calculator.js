@@ -1,7 +1,7 @@
 
 const express = require("express");
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const {add, subtract, multiply, divide} = require('./lib/operations');
 
 app.get('/:operator/:num1/:num2', function(req,res){
